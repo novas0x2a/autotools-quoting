@@ -1,0 +1,7 @@
+AC_INIT([hello], [1.0])
+AM_INIT_AUTOMAKE([foreign])
+AM_MAINTAINER_MODE([disable])
+AC_PROG_CC
+AC_CONFIG_HEADERS([config.h])
+AC_CONFIG_FILES([Makefile])
+AC_OUTPUT

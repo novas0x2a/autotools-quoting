@@ -1,0 +1,33 @@
+load("@rules_foreign_cc//foreign_cc:defs.bzl", "configure_make", "runnable_binary")
+
+filegroup(
+    name = "src",
+    srcs = glob(["**"]),
+)
+
+configure_make(
+    name = "hello_world",
+    env = {
+        "VERBOSE": "1",
+    },
+    lib_source = ":src",
+    out_binaries = select({
+        "@platforms//os:windows": [
+            "hello-world.exe",
+        ],
+        "//conditions:default": [
+            "hello-world",
+        ],
+    }),
+    targets = [
+        "install",
+        "check",
+        "fail",
+    ],
+)
+
+runnable_binary(
+    name = "run",
+    binary = "hello-world",
+    foreign_cc_target = ":hello_world",
+)

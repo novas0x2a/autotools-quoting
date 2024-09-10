@@ -1,0 +1,97 @@
+INFO: Invocation ID: dc6dfc4a-16e2-4808-8504-7dff0888b9df
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: 2 targets (0 packages loaded, 0 targets configured)
+Analyzing: 2 targets (0 packages loaded, 0 targets configured)
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+INFO: Analyzed 2 targets (0 packages loaded, 0 targets configured).
+ERROR: /home/mlundy/Code/bazelbuild/rules_foreign_cc/examples/autoconf-2.71/BUILD.bazel:8:15: Foreign Cc - Configure: Building hello_world failed: (Exit 2): bash failed: error executing CcConfigureMakeRule command (from target //autoconf-2.71:hello_world) /bin/bash -c bazel-out/k8-fastbuild/bin/autoconf-2.71/hello_world_foreign_cc/wrapper_build_script.sh
+
+Use --sandbox_debug to see verbose messages from the sandbox and retain the sandbox build root for debugging
+rules_foreign_cc: Build failed!
+rules_foreign_cc: Printing build logs:
+_____ BEGIN BUILD LOGS _____
+
+Bazel external C/C++ Rules. Building library hello_world
+
+Environment:______________
+BUILD_SCRIPT=bazel-out/k8-fastbuild/bin/autoconf-2.71/hello_world_foreign_cc/build_script.sh
+EXT_BUILD_ROOT=$EXECROOT/_main
+BUILD_LOG=bazel-out/k8-fastbuild/bin/autoconf-2.71/hello_world_foreign_cc/Configure.log
+PWD=$EXECROOT/_main
+BUILD_WRAPPER_SCRIPT=bazel-out/k8-fastbuild/bin/autoconf-2.71/hello_world_foreign_cc/wrapper_build_script.sh
+TMPDIR=/tmp
+EXT_BUILD_DEPS=$EXECROOT/_main/bazel-out/k8-fastbuild/bin/autoconf-2.71/hello_world.ext_build_deps
+BUILD_TMPDIR=$EXECROOT/_main/bazel-out/k8-fastbuild/bin/autoconf-2.71/hello_world.build_tmpdir
+SHLVL=2
+ZERO_AR_DATE=1
+LD_LIBRARY_PATH=/home/mlundy/local/lib
+INSTALLDIR=$EXECROOT/_main/bazel-out/k8-fastbuild/bin/autoconf-2.71/hello_world
+PATH=$EXECROOT/_main:/home/mlundy/.cache/bazelisk/downloads/sha256/794f58b5a5c28c4729f04db0bd1238eaf827105bb49946238b00f681a1da377c/bin:/home/mlundy/.pyenv/bin:/home/mlundy/bin:/home/mlundy/.cargo/bin:/home/mlundy/.linuxbrew/bin:/home/mlundy/.linuxbrew/sbin:/home/mlundy/.local/go/bin:/home/mlundy/.gem/ruby/3.0.0/bin:/home/mlundy/.local/bin:/home/mlundy/local/bin:/opt/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/mlundy/.dotnet/tools:/opt/puppetlabs/bin:/home/mlundy/.local/npm/bin
+VERBOSE=1
+_=/usr/bin/env
+__________________________
++ mkdir -p $EXECROOT/_main/bazel-out/k8-fastbuild/bin/autoconf-2.71/hello_world.build_tmpdir/hello_world
++ ASFLAGS='-U_FORTIFY_SOURCE -fstack-protector -Wall -Wunused-but-set-parameter -Wno-free-nonheap-object -fno-omit-frame-pointer -fno-canonical-system-headers -Wno-builtin-macro-redefined -D__DATE__="redacted" -D__TIMESTAMP__="redacted" -D__TIME__="redacted"'
++ CFLAGS='-U_FORTIFY_SOURCE -fstack-protector -Wall -Wunused-but-set-parameter -Wno-free-nonheap-object -fno-omit-frame-pointer -fno-canonical-system-headers -Wno-builtin-macro-redefined -D__DATE__="redacted" -D__TIMESTAMP__="redacted" -D__TIME__="redacted"'
++ CXXFLAGS='-U_FORTIFY_SOURCE -fstack-protector -Wall -Wunused-but-set-parameter -Wno-free-nonheap-object -fno-omit-frame-pointer -std=c++14 -fno-canonical-system-headers -Wno-builtin-macro-redefined -D__DATE__="redacted" -D__TIMESTAMP__="redacted" -D__TIME__="redacted"'
++ LDFLAGS='-Wl,-S -fuse-ld=lld -B/usr/bin -Wl,-no-as-needed -Wl,-z,relro,-z,now -pass-exit-codes -Wl,--push-state,-as-needed -lstdc++ -Wl,--pop-state -Wl,--push-state,-as-needed -lm -Wl,--pop-state'
++ AR=/usr/bin/ar
++ CC=/usr/bin/gcc
++ CXX=/usr/bin/gcc
++ LD=/usr/bin/ld
++ RANLIB=:
++ CPPFLAGS=
++ $EXECROOT/_main/autoconf-2.71/configure --prefix=$EXECROOT/_main/bazel-out/k8-fastbuild/bin/autoconf-2.71/hello_world.build_tmpdir/hello_world
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether $EXECROOT/_main/bazel-out/k8-opt-exec-ST-d57f47055a04/bin/external/rules_foreign_cc~/toolchains/private/make/bin/make sets $(MAKE)... yes
+checking whether $EXECROOT/_main/bazel-out/k8-opt-exec-ST-d57f47055a04/bin/external/rules_foreign_cc~/toolchains/private/make/bin/make supports nested variables... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking whether /usr/bin/gcc understands -c and -o together... yes
+checking whether $EXECROOT/_main/bazel-out/k8-opt-exec-ST-d57f47055a04/bin/external/rules_foreign_cc~/toolchains/private/make/bin/make supports the include directive... yes (GNU style)
+checking dependency style of /usr/bin/gcc... gcc3
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
++ $EXECROOT/_main/bazel-out/k8-opt-exec-ST-d57f47055a04/bin/external/rules_foreign_cc~/toolchains/private/make/bin/make install
+/usr/bin/gcc -DHAVE_CONFIG_H -I. -I$EXECROOT/_main/autoconf-2.71     -U_FORTIFY_SOURCE -fstack-protector -Wall -Wunused-but-set-parameter -Wno-free-nonheap-object -fno-omit-frame-pointer -fno-canonical-system-headers -Wno-builtin-macro-redefined -D__DATE__="redacted" -D__TIMESTAMP__="redacted" -D__TIME__="redacted" -MT hello-world.o -MD -MP -MF .deps/hello-world.Tpo -c -o hello-world.o $EXECROOT/_main/autoconf-2.71/hello-world.c
+$EXECROOT/_main/autoconf-2.71/hello-world.c: In function 'main':
+<command-line>: error: 'redacted' undeclared (first use in this function)
+$EXECROOT/_main/autoconf-2.71/hello-world.c:5:19: note: in expansion of macro '__DATE__'
+    5 |   char actual[] = __DATE__;
+      |                   ^~~~~~~~
+<command-line>: note: each undeclared identifier is reported only once for each function it appears in
+$EXECROOT/_main/autoconf-2.71/hello-world.c:5:19: note: in expansion of macro '__DATE__'
+    5 |   char actual[] = __DATE__;
+      |                   ^~~~~~~~
+make: *** [Makefile:598: hello-world.o] Error 1
+_____ END BUILD LOGS _____
+rules_foreign_cc: Build wrapper script location: bazel-out/k8-fastbuild/bin/autoconf-2.71/hello_world_foreign_cc/wrapper_build_script.sh
+rules_foreign_cc: Build script location: bazel-out/k8-fastbuild/bin/autoconf-2.71/hello_world_foreign_cc/build_script.sh
+rules_foreign_cc: Build log location: bazel-out/k8-fastbuild/bin/autoconf-2.71/hello_world_foreign_cc/Configure.log
+rules_foreign_cc: Keeping these below directories for debug, but note that the directories inside a sandbox
+rules_foreign_cc: are still cleaned unless you specify the --sandbox_debug Bazel command line flag.
+rules_foreign_cc: Build Dir: $EXECROOT/_main/bazel-out/k8-fastbuild/bin/autoconf-2.71/hello_world.build_tmpdir
+rules_foreign_cc: Deps Dir: $EXECROOT/_main/bazel-out/k8-fastbuild/bin/autoconf-2.71/hello_world.ext_build_deps
+
+Target //autoconf-2.71:src up-to-date (nothing to build)
+Target //autoconf-2.71:hello_world failed to build
+Use --verbose_failures to see the command lines of failed build steps.
+INFO: Elapsed time: 1.324s, Critical Path: 1.27s
+INFO: 2 processes: 2 internal.
+ERROR: Build did NOT complete successfully
